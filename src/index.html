@@ -10,30 +10,25 @@
 <body class="container-fluid">
 <h1>Vente d'accessoire</h1>
 <div id="app">
+
   <div class="row">
+    
     <div class="col">
       <div class="card">
       <div class="card-header">
         <div id="Boutique">
           <h2>Matérielle</h2>
-          <ul>
-            <li>Slip de bain</li>
-            <li>Bonnet de bain</li>
-            <li>Lunette de plonger</li>
-            <li>Un tuba</li>
-          </ul>
-          <ol>
-            <li>Lot masque + tuba</li>
-            <li>Lot Mayo de bain + masque tuba</li>
-            <li>Conbinaison de plonger</li>
-            <li>Bouées</li>
-          </ol>
+          <div class="row" id= "Recherche">
+            <input  class="col form-control" type="search" id="site-search" name="q"
+                   aria-label="Search through site content">
+            <button class="col-2 form-control">Search</button>
+          </div>
         </div>
-        <div id= "Recherche">
-          <input type="search" id="site-search" name="q"
-                 aria-label="Search through site content">
-          <button>Search</button>
-        </div>
+      </div>
+      <div class="card-body">
+        <div class="row materiels"></div>
+
+      </div>
         <div id= "Total">
           <p> Total : </p>
         </div>
@@ -43,6 +38,7 @@
         </div>
 
       </div>
+
     </div>
     </div>
   </div>
