@@ -24,12 +24,14 @@ populateHtml = () => {
     <div class="card-body">
     <div>Prix : ${catalog[i].prix}</div>
     </div>
-    <div class="card-footer px-0">
-    <button type="button" class="col btn btn-outline-danger">
-      ok
+    <div class="card-footer px-1">
+    <div class="row mx-auto">
+    <input class="col-4 form-control" value="${catalog[i].nombre}}" type="number" placeholder="Nombre"/>
+    <button type="button" onclick="yes(${catalog[i].id})" class="col-6 btn btn-outline-danger">
+      Add To Bag
     </button>
     </div>
-  
+    </div>
   </div>`)
 } 
  yes = (produit) => {
