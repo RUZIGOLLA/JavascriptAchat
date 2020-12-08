@@ -1,4 +1,3 @@
-import { Produit } from './Produit.mjs';
 
 export class Panier {
     constructor() {
