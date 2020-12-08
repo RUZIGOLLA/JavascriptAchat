@@ -1,5 +1,4 @@
-
-export class Panier {
+class Panier {
     constructor() {
         this.produits = [];
         this.total = 0;

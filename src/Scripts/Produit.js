@@ -1,4 +1,4 @@
-export class Produit {
+class Produit {
 
     constructor(
         name,

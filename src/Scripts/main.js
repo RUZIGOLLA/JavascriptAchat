@@ -1,4 +1,3 @@
-
 let panier;
 console.log('okok')
 // 'use strict';
