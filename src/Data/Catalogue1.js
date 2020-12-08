@@ -1,12 +1,12 @@
 var catalog = [
     {
-        "id" : 0,
+        "id" : "0",
         "name": "Nounours",
         "prix": "15",
         "nombre": "1",
     },
     {
-        "id" : 1,
+        "id" : "1",
         "name": "Chemise",
         "prix": "35",
         "nombre": "0",

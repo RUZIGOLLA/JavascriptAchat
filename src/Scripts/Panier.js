@@ -5,7 +5,7 @@ class Panier {
     }
 
     AddToPanier(produit) {
-        let produitIndex = this.produits.findIndex(prdt => prdt.id = produit.id)
+        let produitIndex = this.produits.findIndex(prdt => prdt.id === produit.id)
         if (produitIndex !== -1) {
             this.produits[produitIndex] = produit
         } else {
