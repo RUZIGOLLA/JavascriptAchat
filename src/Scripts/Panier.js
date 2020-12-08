@@ -5,7 +5,7 @@ class Panier {
     }
 
     AddToPanier(produit) {
-        let produitIndex = this.produits.find(prdt => prdt.id = produit.id)
+        let produitIndex = this.produits.findIndex(prdt => prdt.id = produit.id)
         if (produitIndex !== -1) {
             this.produits[produitIndex] = produit
         } else {
@@ -14,7 +14,7 @@ class Panier {
     }
 
     DeleteFromPanier(produit) {
-        let prd = this.produits.find(p => p === produit)
+        let prd = this.produits.find(p => p.id === produit.id)
         this.produits.splice(prd, 0);
     }
 
