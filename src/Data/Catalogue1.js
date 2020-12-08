@@ -1,46 +1,50 @@
 var catalog = [
     {
-        "id" : "0",
+        "description": "Salut",
         "name": "Nounours",
-        "prix": "15",
-        "nombre": "1",
+        "price": "15",
+        "image": "Data/images/nounours.jpg"
     },
     {
-        "id" : "1",
+        "description": "Salut",
         "name": "Chemise",
-        "prix": "35",
-        "nombre": "0",
-    }
-    ,    {
-        "id" : "2",
-        "name": "Coussin",
-        "prix": "25",
-        "nombre": "0",
-    },    {
-        "id" : "3",
-        "name": "Draps",
-        "prix": "35",
-        "nombre": "0",
+        "price": "35",
+        "image": "Data/images/nounours.jpg"
     },
-        {
-            "id" : "4",
+    {
+        "description": "Salut",
+        "name": "Coussin",
+        "price": "25",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
+        "name": "Draps",
+        "price": "35",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
         "name": "Edredon",
-        "prix": "25",
-        "nombre": "0",
-    },    {
-        "id" : "5",
+        "price": "25",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
         "name": "Nounours",
-        "prix": "15",
-        "nombre": "0",
-    },    {
-        "id" : "6",
+        "price": "15",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
         "name": "Nounours",
-        "prix": "15",
-        "nombre": "0",
-    },    {
-        "id" : "7",
+        "price": "15",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
         "name": "Nounours",
-        "prix": "15",
-        "nombre": "0",
+        "price": "15",
+        "image": "Data/images/nounours.jpg"
     }
 ]

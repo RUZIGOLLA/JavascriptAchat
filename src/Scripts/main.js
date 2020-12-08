@@ -4,7 +4,12 @@ $(document).ready(() => {
       $.getScript('Data/Catalogue1.js', () => {
         $.get('productInPanier.html', (productInPanierString) => {
 
-          this.listProduit = catalog;
+          this.listProduit = []
+          let id = 1
+          catalog.forEach(product => {
+            listProduit.push(new Produit(id, product.name, product.description, product.image, product.price))
+            id++;
+          })
           populateHtml()
           this.productInPanierString = productInPanierString
           this.panier = new Panier()
@@ -26,26 +31,25 @@ $(document).ready(() => {
   }
 
   buy = (id) => {
-    let product = listProduit.find(product => product.id == id)
-    console.log(product)
+    let product = listProduit.find(product => product.id === id)
     panier.AddToPanier(product)
     RefreshPanier()
   }
 
   populateHtml = () => {
-    for (let i = 0; i < catalog.length; i++) {
+    for (let i = 0; i < listProduit.length; i++) {
       $(".materiels").append(`
       <div class="d-inline mx-2 card my-2 col-2 " >
       <div class="card-title">
-      ${catalog[i].name}
+      ${listProduit[i].name}
         </div>
         <div class="card-body">
-        <div>Prix : ${catalog[i].prix}</div>
+        <div>Prix : ${listProduit[i].price}</div>
         </div>
         <div class="card-footer px-1">
         <div class="row mx-auto">
-        <input class="col-4 form-control" value="${catalog[i].nombre}}" type="number" placeholder="Nombre"/>
-        <button type="button" onclick="buy(${catalog[i].id})" class="col-6 btn btn-outline-danger">
+        <input class="col-5 form-control" type="number" placeholder="Quantité"/>
+        <button type="button" onclick="buy(${listProduit[i].id})" class="col-6 btn btn-outline-danger">
           Add To Bag
         </button>
         </div>
