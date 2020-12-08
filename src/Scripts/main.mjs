@@ -1,3 +1,8 @@
+import { Panier } from './Panier.mjs';
+
+let panier = new Panier();
+console.log(panier)
+
 // 'use strict';
 
 // function counter() {

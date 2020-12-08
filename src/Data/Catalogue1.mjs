@@ -1,5 +1,5 @@
 
-var catalog = [ 
+export var catalog = [
     {
         "name": "Nounours",
         "prix": "15",

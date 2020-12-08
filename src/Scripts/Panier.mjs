@@ -1,4 +1,6 @@
-class Panier {
+import { Produit } from './Produit.mjs';
+
+export class Panier {
     constructor() {
         this.produits = [];
         this.total = 0;
