@@ -8,12 +8,13 @@ var catalog = [
         "name": "Chemise",
         "prix": "35",
         "nombre": "0",
-    }
-    ,    {
+    },
+    {
         "name": "Coussin",
         "prix": "25",
         "nombre": "0",
-    },    {
+    },
+    {
         "name": "Draps",
         "prix": "35",
         "nombre": "0",

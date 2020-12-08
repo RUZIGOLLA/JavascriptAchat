@@ -5,7 +5,12 @@ class Panier {
     }
 
     AddToPanier(produit) {
-        this.produits.Add(produit);        
+        let produitIndex = this.produits.find(prdt => prdt.id = produit.id)
+        if (produitIndex !== -1) {
+            this.produits[produitIndex] = produit
+        } else {
+            this.produits.push(produit)
+        }
     }
 
     DeleteFromPanier(produit) {
