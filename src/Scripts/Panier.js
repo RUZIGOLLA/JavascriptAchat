@@ -21,7 +21,8 @@ class Panier {
 
     getTotal() {
         this.products.forEach(p => {
-                this.total += p.prix
+            console.log(p.price, this.total)
+                this.total += p.price
             }
         )
     }

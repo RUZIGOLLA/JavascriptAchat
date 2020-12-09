@@ -7,7 +7,8 @@ $(document).ready(() => {
           this.listProduit = []
           let id = 1
           catalog.forEach(product => {
-            listProduit.push(new Produit(id, product.name, product.description, product.image, product.price))
+            listProduit.push(new Produit(id, product.name, product.description, product.image, parseFloat(product.price, 10)))
+            
             id++;
           })
           populateHtml()
@@ -22,7 +23,8 @@ $(document).ready(() => {
   function RefreshPanier() {
       varproducts=""
       panier.getTotal()
-      $('#total').html(panier.total)
+      console.log(panier.total)
+      $('#Total').html(panier.total)
       $('#panierList').html('');
       panier.products.forEach((product)=>{
         let stringToAdd = this.productInPanierString
