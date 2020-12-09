@@ -10,10 +10,26 @@
 <body class="container-fluid">
 <h1>Vente d'accessoire</h1>
 <div id="app">
-
+<input type="button" class="btn btn-outline-danger" value="FUCLPPL">
+<div class="d-inline mx-2 card my-2 col-2 " >
+        <div class="card-title">
+        ${catalog[i].name}
+          </div>
+          <div class="card-body">
+          <div>Prix : ${catalog[i].prix}</div>
+          </div>
+          <div class="card-footer px-1">
+          <div class="row mx-auto">
+          <input class="col-8 form-control" value="${catalog[i].nombre}}" type="number" placeholder="Nombre"/>
+          <button type="button" onclick="buy(${catalog[i].id})" class="col-3 btn btn-outline-danger">
+            +
+          </button>
+          </div>
+          </div>
+</div>
   <div class="row">
     
-    <div class="col">
+    <div class="matos col">
       <div class="card">
       <div class="card-header">
         <div id="Boutique">
@@ -29,21 +45,40 @@
         <div class="row materiels"></div>
 
       </div>
-        <div id= "Total">
-          <p> Total : </p>
-        </div>
-
-        <div id="Panier">
-          <p> Panier : </p>
-          <div id="panierList"></div>
-        </div>
+    
 
       </div>
 
     </div>
+    <div class="panier col-4 my-5">
+     <div class="card">
+       <div class="card-header">
+         <h2>PANIER</h2>
+       </div>
+       <div class="card-body">
+      <div id= "Total">
+        <p> Total : </p>
+      </div>
+
+      <div id="Panier" class="">
+        <p> Panier : </p>
+        <div  class="table">
+          <div class=""></div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Produit</th>
+                <th scope="col">Prix unit.</th>
+                <th scope="col">Qté</th>
+                <th scope="col">Prix tot.</th>
+              </tr>
+            </thead>
+            <tbody id="panierList"></tbody>
+        </div>
+      </div></div>
+    </div>
     </div>
   </div>
-
 </div>
 
 
