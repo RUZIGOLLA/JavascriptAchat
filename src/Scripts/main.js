@@ -66,7 +66,8 @@ $(document).ready(() => {
   populateHtml = () => {
     for (let i = 0; i < listProduit.length; i++) {
       $(".materiels").append(`
-      <div class="d-inline mx-2 card my-2 col-2 px-0" >
+      <div class="mx-3 my-2  px-0 shadow-lg card col-2">
+      <div class="  " >
         <div class="card-title text-center pt-1 mb-0">
             <h4 class="mb-0">${listProduit[i].name}</h4>
         </div>
@@ -82,7 +83,7 @@ $(document).ready(() => {
             </svg>
           </button>
         </div>
-      </div>`)
+      </div></div>`)
     }
   }
 
