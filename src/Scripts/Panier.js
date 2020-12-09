@@ -15,7 +15,8 @@ class Panier {
 
     RemoveFromBasket(product) {
         let prd = this.products.findIndex(p => p.id === product.id)
-        this.products.splice(prd, 1);
+        if (prd !== -1)
+            this.products.splice(prd, 1);
     }
 
     getTotal() {
