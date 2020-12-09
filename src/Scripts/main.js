@@ -64,20 +64,19 @@ $(document).ready(() => {
   populateHtml = () => {
     for (let i = 0; i < listProduit.length; i++) {
       $(".materiels").append(`
-      <div class="d-inline mx-2 card my-2 col-2 " >
-      <div class="card-title">
-      ${listProduit[i].name}
+      <div class="d-inline mx-2 card my-2 col-2 px-0" >
+        <div class="card-title text-center pt-1 mb-0">
+            <h4 class="mb-0">${listProduit[i].name}</h4>
         </div>
-        <div class="card-body">
-        <div>Prix : ${listProduit[i].price}</div>
+        <div class="card-body pt-0">
+            <img src="${listProduit[i].image}" class="card-img-top">
         </div>
         <div class="card-footer px-1">
-        <div class="row mx-auto">
-        <input id="${listProduit[i].id}-quantity" class="col-5 form-control" type="number" placeholder="Quantité"/>
-        <button type="button" onclick="buy(${listProduit[i].id})" class="col-6 btn btn-outline-danger">
-          Add To Bag
-        </button>
-        </div>
+          <div>Prix : ${listProduit[i].price} €</div>
+          <input id="${listProduit[i].id}-quantity" class="form-control" type="number" placeholder="Quantité"/>
+          <button type="button" onclick="buy(${listProduit[i].id})" class="btn btn-outline-danger btn-block">
+            Add To Bag
+          </button>
         </div>
       </div>`)
     }
