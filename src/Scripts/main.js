@@ -2,7 +2,7 @@ $(document).ready(() => {
   $.getScript('Scripts/Produit.js', () => {
     $.getScript('Scripts/Panier.js', () => {
       $.getScript('Data/Catalogue1.js', () => {
-        $.get('productInPanier.html', (productInPanierString) => {
+        $.get('productInPanier.html', async (productInPanierString) => {
           $('[data-toggle="popover"]').popover()
           $('#site-search').on('input', e => searchInCatalog($('#site-search')[0].value))
           this.constlistProduit = []
@@ -17,12 +17,28 @@ $(document).ready(() => {
           populateHtml()
           this.productInPanierString = productInPanierString
           this.panier = new Panier()
-
+          await animateHtml()
+    
         })
       })
     })
   })
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  async function animateHtml() {
+   let prdts = $(".produits") 
+   // console.log(produits.length)
+   for (let i = 0; i < prdts.length; i++) {
+    console.log(prdts[i]);
+      $(prdts[i]).addClass("produit")
+      sleep(2000).then(() => addLoad(prdts[i]))
+   } 
+    }
 
+   async function addLoad(prdt) {
+      $(prdt).addClass('load')
+    }
   function RefreshPanier() {
       varproducts=""
       panier.getTotal()
@@ -79,11 +95,11 @@ $(document).ready(() => {
   }
   populateHtml = () => {
     $("#materiels").empty()
-    console.log($($("#materiels")[0]))
+   
     
     for (let i = 0; i < listProduit.length; i++) {
       $("#materiels").append(`
-      <div class="mx-3 my-2  px-0 shadow-lg card col-xs-6 col-sm-2">
+      <div class="mx-3 my-2 produits px-0 shadow-lg card col-xs-6 col-sm-2">
         <div class="card-title text-center pt-1 mb-0">
             <h4 class="mb-0">${listProduit[i].name}</h4>
         </div>
