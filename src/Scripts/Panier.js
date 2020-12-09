@@ -22,7 +22,7 @@ class Panier {
     getTotal() {
         this.total = 0;
         this.products.forEach(p => {
-                this.total += p.price
+                this.total += p.price * p.quantity
             }
         )
     }

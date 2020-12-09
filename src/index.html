@@ -10,23 +10,7 @@
 <body class="container-fluid">
 <h1>Vente d'accessoire</h1>
 <div id="app">
-<input type="button" class="btn btn-outline-danger" value="FUCLPPL">
-<div class="d-inline mx-2 card my-2 col-2 " >
-        <div class="card-title">
-        ${catalog[i].name}
-          </div>
-          <div class="card-body">
-          <div>Prix : ${catalog[i].prix}</div>
-          </div>
-          <div class="card-footer px-1">
-          <div class="row mx-auto">
-          <input class="col-8 form-control" value="${catalog[i].nombre}}" type="number" placeholder="Nombre"/>
-          <button type="button" onclick="buy(${catalog[i].id})" class="col-3 btn btn-outline-danger">
-            +
-          </button>
-          </div>
-          </div>
-</div>
+
   <div class="row">
     
     <div class="matos col">
@@ -34,11 +18,6 @@
       <div class="card-header">
         <div id="Boutique">
           <h2>Matérielle</h2>
-          <div class="row" id= "Recherche">
-            <input  class="col form-control" type="search" id="site-search" name="q"
-                   aria-label="Search through site content">
-            <button class="col-2 form-control">Search</button>
-          </div>
         </div>
       </div>
       <div class="card-body">
@@ -53,31 +32,37 @@
     <div class="panier col-4 my-5">
      <div class="card">
        <div class="card-header">
-         <h2>PANIER</h2>
+         <div class="row" id= "Recherche">
+           <input  class="col form-control" type="search" id="site-search" name="q"
+                   aria-label="Search through site content">
+           <button class="col-2 form-control">Search</button>
+         </div>
+       </div>
+       <div class="card-header">
+           <h5> Total : <span id="Total">0</span> €</h5>
+         </div>
        </div>
        <div class="card-body">
-      <div >
-        <p> Total : <span id="Total"></span> 0 €</p>
-      </div>
-
-      <div id="Panier" class="">
-        <p> Panier : </p>
-        <div  class="table">
-          <div class=""></div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Produit</th>
-                <th scope="col">Prix unit.</th>
-                <th scope="col">Qté</th>
-                <th scope="col">Prix tot.</th>
-                <th scope="col"> .</th>
-              </tr>
-            </thead>
-            <tbody id="panierList"></tbody>
+        <div id="Panier" class="">
+          <p> Panier : </p>
+          <div  class="table">
+            <div class=""></div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Produit</th>
+                  <th scope="col">Prix unit.</th>
+                  <th scope="col">Qté</th>
+                  <th scope="col">Prix tot.</th>
+                  <th scope="col"> .</th>
+                </tr>
+              </thead>
+              <tbody id="panierList"></tbody>
+            </table>
+          </div>
         </div>
-      </div></div>
-    </div>
+       </div>
+      </div>
     </div>
   </div>
 </div>
