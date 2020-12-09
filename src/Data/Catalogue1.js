@@ -1,47 +1,50 @@
-var catalog = [
-        {
-            "id" : "0",
-            "name": "Nounours",
-            "prix": "15",
-            "nombre": "1",
-        },
-        {
-            "id" : "1",
-            "name": "Chemise",
-            "prix": "35",
-            "nombre": "1",
-        }
-        ,    {
-            "id" : "2",
-            "name": "Coussin",
-            "prix": "25",
-            "nombre": "1",
-        },    {
-            "id" : "3",
-            "name": "Draps",
-            "prix": "35",
-            "nombre": "1",
-        },
-            {
-                "id" : "4",
-            "name": "Edredon",
-            "prix": "25",
-            "nombre": "1",
-        },    {
-            "id" : "5",
-            "name": "Nounours",
-            "prix": "15",
-            "nombre": "1",
-        },    {
-            "id" : "6",
-            "name": "Nounours",
-            "prix": "15",
-            "nombre": "1",
-        },    {
-            "id" : "7",
-            "name": "Nounours",
-            "prix": "15",
-            "nombre": "1",
-        }
-    ]
-    
+var catalog = [
+    {
+        "description": "Salut",
+        "name": "Nounours",
+        "price": "15",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
+        "name": "Chemise",
+        "price": "35",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
+        "name": "Coussin",
+        "price": "25",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
+        "name": "Draps",
+        "price": "35",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
+        "name": "Edredon",
+        "price": "25",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
+        "name": "Nounours",
+        "price": "15",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
+        "name": "Nounours",
+        "price": "15",
+        "image": "Data/images/nounours.jpg"
+    },
+    {
+        "description": "Salut",
+        "name": "Nounours",
+        "price": "15",
+        "image": "Data/images/nounours.jpg"
+    }
+]
