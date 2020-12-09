@@ -28,11 +28,12 @@ $(document).ready(() => {
   }
   async function animateHtml() {
    let prdts = $(".produits") 
+   $(prdts).addClass("produit")
    // console.log(produits.length)
    for (let i = 0; i < prdts.length; i++) {
     console.log(prdts[i]);
-      $(prdts[i]).addClass("produit")
-      sleep(2000).then(() => addLoad(prdts[i]))
+      // $(prdts[i]).addClass("produit")
+      await sleep(200).then(() => addLoad(prdts[i]))
    } 
     }
 
