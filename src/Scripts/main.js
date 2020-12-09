@@ -21,7 +21,7 @@ $(document).ready(() => {
 
   function RefreshPanier() {
     var products = ""
-    panier.produits.forEach((product) => {
+    panier.products.forEach((product) => {
       let stringToAdd = this.productInPanierString
       stringToAdd = stringToAdd.replace('${name}', product.name)
       stringToAdd = stringToAdd.replace('${quantity}', product.quantity)
@@ -32,8 +32,20 @@ $(document).ready(() => {
 
   buy = (id) => {
     let product = listProduit.find(product => product.id === id)
-    panier.AddToPanier(product)
+    let quantityToAdd = parseInt($("#" + id + "-quantity").val())
+    if (isNaN(quantityToAdd)) {
+      quantityToAdd = 1;
+    }
+    product.quantity = quantityToAdd + product.quantity > 10 ? 10 : quantityToAdd + product.quantity
+    panier.AddToBasket(product)
     RefreshPanier()
+  }
+
+  removeFromBasket = (id) => {
+    let product = listProduit.find(product => product.id === id)
+    product.quantity = 0;
+    panier.RemoveFromBasket(product);
+    RefreshPanier();
   }
 
   populateHtml = () => {
@@ -48,10 +60,11 @@ $(document).ready(() => {
         </div>
         <div class="card-footer px-1">
         <div class="row mx-auto">
-        <input class="col-5 form-control" type="number" placeholder="Quantité"/>
+        <input id="${listProduit[i].id}-quantity" class="col-5 form-control" type="number" placeholder="Quantité"/>
         <button type="button" onclick="buy(${listProduit[i].id})" class="col-6 btn btn-outline-danger">
           Add To Bag
         </button>
+        <button type="button" onclick="removeFromBasket(${listProduit[i].id})">Delete</button>
         </div>
         </div>
       </div>`)

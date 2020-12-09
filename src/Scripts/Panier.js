@@ -1,25 +1,25 @@
 class Panier {
     constructor() {
-        this.produits = [];
+        this.products = [];
         this.total = 0;
     }
 
-    AddToPanier(produit) {
-        let produitIndex = this.produits.findIndex(prdt => prdt.id === produit.id)
-        if (produitIndex !== -1) {
-            this.produits[produitIndex] = produit
+    AddToBasket(product) {
+        let productIndex = this.products.findIndex(listProduct => listProduct.id === product.id)
+        if (productIndex !== -1) {
+            this.products[productIndex] = product
         } else {
-            this.produits.push(produit)
+            this.products.push(product)
         }
     }
 
-    DeleteFromPanier(produit) {
-        let prd = this.produits.find(p => p.id === produit.id)
-        this.produits.splice(prd, 0);
+    RemoveFromBasket(product) {
+        let prd = this.products.findIndex(p => p.id === product.id)
+        this.products.splice(prd, 1);
     }
 
     getTotal() {
-        this.produits.forEach(p => {
+        this.products.forEach(p => {
                 this.total += p.prix
             }
         )
