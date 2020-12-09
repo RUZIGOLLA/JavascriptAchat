@@ -36,7 +36,9 @@ $(document).ready(() => {
       await sleep(200).then(() => addLoad(prdts[i]))
    } 
     }
-
+    async function removeLoad(prdt) {
+      $(prdt).removeClass('load')
+    }
    async function addLoad(prdt) {
       $(prdt).addClass('load')
     }
@@ -82,7 +84,7 @@ $(document).ready(() => {
     panier.RemoveFromBasket(product);
     RefreshPanier();
   }
-  searchInCatalog = (searchString) => {
+  searchInCatalog = async (searchString) => {
           listProduit = []
           constlistProduit.forEach(p => {
           console.log(p.name.toLowerCase() === searchString.toLowerCase(), p, searchString)
@@ -91,13 +93,19 @@ $(document).ready(() => {
           }
          
         })
-    //  }
+   $(".produits").removeClass("produit")
+   //  }
+        //$()
         populateHtml();
+        await animateHtml()
   }
   populateHtml = () => {
     $("#materiels").empty()
    
-    
+    if (listProduit.length == 0) {
+      $("#materiels").append(`<div class="text-center"><h4> Aucun produit trouvé ...</h4></div>`)
+
+    }
     for (let i = 0; i < listProduit.length; i++) {
       $("#materiels").append(`
       <div class="mx-3 my-2 produits px-0 shadow-lg card col-xs-6 col-sm-2">
