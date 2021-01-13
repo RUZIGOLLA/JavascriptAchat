@@ -66,7 +66,7 @@ $(document).ready(() => {
       quantityToAdd = 1;
     }
     if (quantityToAdd > 0) {
-      product.quantity = quantityToAdd + product.quantity > 10 ? 10 : quantityToAdd + product.quantity
+      product.quantity = quantityToAdd + product.quantity > 9 ? 9 : quantityToAdd + product.quantity
       panier.AddToBasket(product)
       RefreshPanier()
     }
@@ -128,6 +128,10 @@ $(document).ready(() => {
   }
 
   changeQuantity = (element) => {
+      if (element.value > 9 || element.value < 0) {
+          element.value = 0
+      }
+
       if (element.value !== "0" && element.value !== "") {
           let buyButton = element.id.split('-')[0] + '-buy'
           $('#'+buyButton).removeClass('inactive');
